@@ -1,0 +1,17 @@
+<%= form_for @question do |f| %>
+	<%= f.text_area :text %> <br>
+	<%= f.submit %>
+<% end %> 
+
+    <div id="questions">
+     <% @questions.each do |question| %>
+            <div>
+            <%= question.text %> 
+            <br>
+            <!--- show the actual answer -->
+            <% if ! question.answers.empty? %>
+            <%= question.answers.last.text %>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
