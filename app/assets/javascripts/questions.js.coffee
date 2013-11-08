@@ -14,5 +14,5 @@ $ ->
 		# Make a post request with the question that was submitted
 		$.post( "/questions", {question: question}).done (data) ->
             console.log data
-            $("#questions").prepend("<div>" + data["question"]["text"] + "<br>" + data["answer"]["text"] + "</div>") 
+            $("#questions").prepend("<div> #{data['question']['text']} <br> #{data['answer']['text']} </div>") 
           
